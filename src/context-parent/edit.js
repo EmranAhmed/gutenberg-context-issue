@@ -1,6 +1,6 @@
 import './editor.scss'
 
-import { useState } from '@wordpress/element'
+import { useState, useMemo } from '@wordpress/element'
 
 import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor'
 
@@ -16,12 +16,16 @@ export default function Edit ({ attributes, setAttributes, clientId }) {
 		allowedBlocks: ['custom/context-child'],
 	})
 
-	console.log('default parent', id)
+	const context = {
+		id
+	};
+
+	console.log('default parent', context)
 
 	return (
 		<div {...blockProps}>
 			Parent
-			<Context.Provider value={{ id }}>
+			<Context.Provider value={ useMemo( () => context, Object.values( context ) ) }>
 				<div {...innerBlockProps} />
 			</Context.Provider>
 		</div>

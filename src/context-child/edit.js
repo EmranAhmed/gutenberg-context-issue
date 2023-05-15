@@ -5,7 +5,12 @@ import { useContext } from '@wordpress/element'
 
 import { Context } from '../utils'
 
-export default function Edit ({ attributes, setAttributes, clientId }) {
+export default function Edit ({
+	attributes,
+	setAttributes,
+	clientId,
+	context,
+}) {
 
 	const blockProps = useBlockProps()
 
