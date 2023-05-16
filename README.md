@@ -8,4 +8,4 @@
 - Add block on a page or post name `Context Parent`
 - You will see a `console` message on Chrome console panel
 - Now add `Context child` as inner block on  `Context Parent` block
-- It should show same `console` data passed from parent block. 
+- It should show same `console` data passed from parent block.
