@@ -18,11 +18,11 @@ export default function Edit ({
 
 	const x = useContext(Context)
 
-	console.log('from child', x)
+	console.log('child block', x)
 
 	return (
 		<div {...blockProps}>
-			Children
+			Child block as inner block
 			<div {...innerBlockProps} />
 		</div>
 	)

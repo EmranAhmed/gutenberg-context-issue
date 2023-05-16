@@ -16,16 +16,12 @@ export default function Edit ({ attributes, setAttributes, clientId }) {
 		allowedBlocks: ['custom/context-child'],
 	})
 
-	const context = {
-		id
-	};
-
-	console.log('default parent', context)
+	console.log('parent block', id)
 
 	return (
 		<div {...blockProps}>
 			Parent
-			<Context.Provider value={ useMemo( () => context, Object.values( context ) ) }>
+			<Context.Provider value={{ id }}>
 				<div {...innerBlockProps} />
 			</Context.Provider>
 		</div>
