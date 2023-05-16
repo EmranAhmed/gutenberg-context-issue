@@ -1,4 +1,4 @@
-# Test of `createContext`, `useContext` from ``@wordpress/element` doesn't work on `InnerBlocks` in gutenberg custom block
+# Test of `createContext`, `useContext` from `@wordpress/element` doesn't work on `InnerBlocks` in gutenberg custom block
 
 ## How to test
 - Download this repo.
